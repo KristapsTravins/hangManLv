@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import Letter from './components/Letter';
+import Secret_box from './components/Secret_box';
+import './css/main.css';
+import data from './Data/letters.json';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='drawing'></div>
+      <div className='word'>
+        <Secret_box secret="A" />
+        <Secret_box secret="C" />
+        <Secret_box secret="V" />
+      </div>
+      <div className='letters'>
+        {
+          data.letters.map(i=>{
+            return  <Letter letter={i} />
+          })
+        }
+       
+      </div>
     </div>
   );
 }

@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap');
+
+$base-col:#201F1F;
+$secBase-col:#616161;
+$title-background-col: linear-gradient( 68.4deg,  rgba(99,251,215,1) -0.4%, rgba(5,222,250,1) 100.2% );
+
+@mixin text_style{
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #FFFFFF;
+    
+}
+
+@mixin header_style{
+  
+    background: $title-background-col;
+
+    background-clip: text;
+    color: transparent;
+    
+}
+@mixin scaffolding {
+    border: 0.1px dotted black;
+}
+@mixin span_style{
+    background: $title-background-col;
+    background-clip: text;
+    color: transparent;
+}
