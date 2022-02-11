@@ -1,22 +1,32 @@
 import Letter from './components/Letter';
-import Secret_box from './components/Secret_box';
+import React, { useEffect, useState } from 'react';
+import Secretbox from './components/Secret_box';
 import './css/main.css';
+import selectword from './Data/wordwork';
 import data from './Data/letters.json';
 
+
+
+
 function App() {
+  const [secret,setSecret] = useState('');
+  
+  useEffect(() => {
+    setSecret(selectword(data.names));
+  }, [])
+  
+ 
   return (
     <div className="App">
       <div className='drawing'></div>
       <div className='word'>
-        <Secret_box secret="A" />
-        <Secret_box secret="C" />
-        <Secret_box secret="V" />
+      {
+        secret.split('').map(i=>{return <Secretbox letter={i} />}) 
+      }
       </div>
       <div className='letters'>
         {
-          data.letters.map(i=>{
-            return  <Letter letter={i} />
-          })
+          data.letters.map(i=>{return  <Letter letter={i} />})
         }
        
       </div>
