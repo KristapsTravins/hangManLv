@@ -4,6 +4,7 @@ import { useContext } from 'react';
 
 const Secretbox =(props)=> {
   const wordsData = useContext(WordContext);
+  
 
   return (
     <div className='secret'>
