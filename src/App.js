@@ -2,7 +2,7 @@ import Letter from './components/Letter';
 import React, { useEffect, useState } from 'react';
 import Secretbox from './components/Secret_box';
 import './css/main.css';
-import {giveRnd, selectword }from './Data/wordwork';
+import {countPoints, giveRnd, selectword }from './Data/wordwork';
 import data from './Data/letters.json';
 import {Score,Lose} from './components/Score';
 import Usedletter from './components/Usedletter';
@@ -22,11 +22,11 @@ function App() {
 
   useEffect(() => {
     const Sword = selectword(data.names);
+    console.log(Sword);
     AddUsedLetters(giveRnd(Sword))
     setSecret(Sword);
-   
-
   }, [guessedWords])
+
 
   
  
