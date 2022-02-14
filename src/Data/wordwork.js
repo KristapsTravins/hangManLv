@@ -3,16 +3,14 @@
   return Math.floor(Math.random() * max);
 }
 export const selectword = (array,guessedWords) =>{
-  let word = array[0];
-  
-  while(guessedWords.includes(word)){
-   word = array[getRandomInt(array.length)];
+  let word = array[getRandomInt(array.length)]['vards'];
+  while(guessedWords.includes(word)&& guessedWords[guessedWords.length -1].charAt(0) === word.charAt(0)){
+   word = array[getRandomInt(array.length)]['vards'];
   }
- 
   return word
 }
 
-export const countInst = (char,secret) =>{
+export const countInst = (char,secret) =>{ 
   const how = secret.toUpperCase().split('').filter(c=>c.includes(char));
   return how.length
 }
@@ -26,7 +24,13 @@ export const countPoints = (secret,usedLetters) =>{
  let counter = 0;
  a.forEach(element => {
    usedLetters.includes(element)?counter++:<></>;
- });
-return counter
+ }); 
+ return counter
+}
 
+export const findHint = (array,secret) =>{
+let answ;
+ array.map(i=> i['vards']===secret?answ = i['skaidrojums']:<></>);
+ console.log(answ);
+ return answ;
 }
