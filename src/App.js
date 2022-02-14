@@ -22,9 +22,9 @@ function App() {
   const wordData = {total,setTotal,AddUsedLetters,usedLetters,setWScore,secret,Wscore,setLScore,Lscore,setGuessedWords,guessedWords};
 
   useEffect(() => {
-    const Sword = selectword(data.names);
-    console.log(Sword);
-    AddUsedLetters(giveRnd(Sword))
+    const Sword = selectword(data.names,guessedWords);
+    AddUsedLetters(giveRnd(Sword));
+
     setSecret(Sword);
   }, [guessedWords])
 

@@ -2,9 +2,14 @@
  const getRandomInt = (max)=> {
   return Math.floor(Math.random() * max);
 }
-export const selectword = (array) =>{
-   
-  return array[getRandomInt(array.length)]    
+export const selectword = (array,guessedWords) =>{
+  let word = array[0];
+  
+  while(guessedWords.includes(word)){
+   word = array[getRandomInt(array.length)];
+  }
+ 
+  return word
 }
 
 export const countInst = (char,secret) =>{
