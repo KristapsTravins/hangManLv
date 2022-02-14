@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap");
+.main_window {
+  height: 100%;
+  min-width: 450px;
+  position: relative;
+}
+
+.main_window .step1 {
+  width: 150px;
+  height: 3px;
+  position: relative;
+  top: 50px;
+  left: 70px;
+  background: black;
+  -webkit-animation-name: draw;
+          animation-name: draw;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+@-webkit-keyframes draw {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 150px;
+  }
+}
+
+@keyframes draw {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 150px;
+  }
+}
+
+.main_window .step2 {
+  width: 3px;
+  height: 55px;
+  position: relative;
+  top: 49px;
+  left: 217px;
+  background: black;
+  -webkit-animation-name: draw2;
+          animation-name: draw2;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+@-webkit-keyframes draw2 {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 55px;
+  }
+}
+
+@keyframes draw2 {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 55px;
+  }
+}
+
+.main_window .step3 {
+  width: 58px;
+  height: 55px;
+  position: relative;
+  top: 49px;
+  left: 186px;
+  border-radius: 50%;
+  border: 3px solid;
+}
+
+.main_window .step4 {
+  width: 3px;
+  height: 55px;
+  position: relative;
+  top: 49px;
+  left: 217px;
+  background: black;
+  -webkit-animation-name: draw4;
+          animation-name: draw4;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+@-webkit-keyframes draw4 {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 55px;
+  }
+}
+
+@keyframes draw4 {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 55px;
+  }
+}
+
+.main_window .step5 {
+  width: 3px;
+  height: 35px;
+  -webkit-transform: rotate(47deg);
+          transform: rotate(47deg);
+  position: relative;
+  top: -12px;
+  left: 202px;
+  background: black;
+  -webkit-animation-name: draw5;
+          animation-name: draw5;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+@-webkit-keyframes draw5 {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 35px;
+  }
+}
+
+@keyframes draw5 {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 35px;
+  }
+}
+
+.main_window .step6 {
+  width: 35px;
+  height: 3px;
+  -webkit-transform: rotate(42deg);
+          transform: rotate(42deg);
+  position: relative;
+  top: -32px;
+  left: 214px;
+  background: black;
+  -webkit-animation-name: draw6;
+          animation-name: draw6;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+@-webkit-keyframes draw6 {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 35px;
+  }
+}
+
+@keyframes draw6 {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 35px;
+  }
+}
+
+.main_window .step7 {
+  width: 35px;
+  height: 3px;
+  -webkit-transform: rotate(42deg);
+          transform: rotate(42deg);
+  position: relative;
+  top: 20px;
+  left: 214px;
+  background: black;
+  -webkit-animation-name: draw6;
+          animation-name: draw6;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+.main_window .step8 {
+  width: 3px;
+  height: 35px;
+  -webkit-transform: rotate(47deg);
+          transform: rotate(47deg);
+  position: relative;
+  top: 2px;
+  left: 204px;
+  background: black;
+  -webkit-animation-name: draw3;
+          animation-name: draw3;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+@-webkit-keyframes draw3 {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 35px;
+  }
+}
+
+@keyframes draw3 {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 35px;
+  }
+}
+/*# sourceMappingURL=drawing.css.map */

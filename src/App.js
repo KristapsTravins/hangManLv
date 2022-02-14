@@ -6,6 +6,7 @@ import {countPoints, giveRnd, selectword }from './Data/wordwork';
 import data from './Data/letters.json';
 import {Score,Lose} from './components/Score';
 import Usedletter from './components/Usedletter';
+import Drawing from './components/Drawing';
 
 export const WordContext = React.createContext([]);
 
@@ -27,13 +28,17 @@ function App() {
     setSecret(Sword);
   }, [guessedWords])
 
-
+  useEffect(()=>{
+    setWScore(countPoints(secret,usedLetters));
+  },[usedLetters])
   
  
   return (
     <div className="App">
        <WordContext.Provider value={wordData}>
-      <div className='drawing'></div>
+      <div className='drawing'>
+        <Drawing loseRes={Lscore} />
+      </div>
       <div className='word'>
       {
         secret.split('').map(i=>{return <Secretbox letter={i.toUpperCase()} />}) 
