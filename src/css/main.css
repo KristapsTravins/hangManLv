@@ -218,7 +218,7 @@
 
 .App .hint h5 {
   font-weight: 200;
-  font-size: 2vw;
+  font-size: 27px;
 }
 
 .App .letters .letter:active {
@@ -453,7 +453,7 @@
   }
   .App .hint h5 {
     font-weight: 200;
-    font-size: 6vw;
+    font-size: 1.6em;
   }
 }
 /*# sourceMappingURL=main.css.map */
